@@ -16,6 +16,7 @@ function preload() {
 function setup() {
   frameRate(fps);
   BGsong.setVolume(0.1);
+  BGsong.amp(0.1);
   BGsong.play();
   createCanvas(960, 600);
   SnK = new Snake();
