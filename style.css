@@ -1,14 +1,64 @@
-html, body {
-  height: 100%;
+@font-face {
+    font-family: "01 Digit";
+    src: url("assets/fonts/01Digit.tff");
+    font-weight: normal;
 }
 
+*   {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    }
+
 body {
-  margin: 0;
-  display: flex;
+background-image: url("http://i.imgur.com/wnQih6d.png");
+background-size: cover;
+background-repeat: no-repeat;
+}
 
-  /* This centers our sketch horizontally. */
-  justify-content: center;
+#doge {
 
-  /* This centers our sketch vertically. */
-  align-items: center;
+}
+
+br {
+    line-height: 30px
+}
+
+h1, h2, h3, h4 {
+        color: white;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.green h3, .green h4{
+    color: #86fd53;
+}
+
+#fag {
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    width: 250px;
+    display: inline-block;
+}
+
+#TT h4 {
+    color:#86fd53;
+    text-align: left;
+    border-style: solid;
+    border-color: white;
+    border-width: thin;
+    border-height: thin;
+    width: 160px;
+}
+
+.green h3 input {
+    text-align: left;
+    border-color: #86fd53;
+    border-width: 2px;
+    border-height: 2px;
+    border-radius: 2%;
+    background-color: black;
+    color: white;
 }
