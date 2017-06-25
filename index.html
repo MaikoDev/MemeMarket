@@ -1,68 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MemeMarket</title>
-      <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-      <link href="style.css" type="text/css" rel="stylesheet">
-   </head>
-    <body onload="MainFunc()">
-    <br /><br /><br /><br />
-<div id="doge">
-<img src="animated_doge/9.png" height="150" width="150">
-</div>
-<img src="http://i.imgur.com/FqIG6wY.png" id="MM_TITLE">
-<h2>Praise Kek. Trade Kek.</h2>
-<div class="green">
-    <h3>Username: <input type="text" id="USERNAME"></h3>
-    <h3>Password: <input type="password" id="PASSWORD"></h3>
-    <h4 id="fag">Trader's Online: 54,287</h4>
-</div>
-<div id="TT">
-<h4>Trending Terminal</h4>
-</div>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Meme Market</title>
 
-<script>
-  var mmTitleObj = null;
-  var dogeObj = null;
-  var x = 0;
-  var move;
-  var animate;
-  var time;
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="public/img/favicon.png"/>
 
-  function MainFunc() {
-    var audio = new Audio('assets/sounds/music/theme.mp3');
-    audio.volume = 0.2;
-    audio.play();
+    <!-- Load CSS files -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="dist/css/main.min.css">
+  </head>
 
-    mmTitleObj = document.getElementById('MM_TITLE');
-    mmTitleObj.style.position= 'relative';
-    mmTitleObj.style.top = '0px';
+  <body>
+    <div id="meme-market"></div>
 
-    dogeObj = document.getElementById('doge');
-    dogeObj.style.position= 'relative';
-    dogeObj.style.top = '0px';
-
-    timerIncrement();
-    moveDiv()
-  }
-
-  function moveDiv(){
-    move = ((Math.sin(x * 0.5)));
-    mmTitleObj.style.top = parseInt(mmTitleObj.style.top) + move + 'px';
-    dogeObj.style.top = parseInt(dogeObj.style.top) + move + 'px';
-               animate = setTimeout(moveDiv,16);
-  }
-
-  function timerIncrement() {
-    if (x >= (60 * Math.PI)) {
-        x = 0;
-    } else {
-        x += 0.1;
-    }
-
-    time = setTimeout(timerIncrement, 16);
-  }
-</script>
-
-    </body>
+    <script src="dist/js/main.js"></script>
+  </body>
 </html>
