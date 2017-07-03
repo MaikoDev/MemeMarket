@@ -1,0 +1,215 @@
+@-webkit-keyframes brandAnimation {
+  0% {
+    top: -10px;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: -10px;
+  }
+}
+
+@keyframes brandAnimation {
+  0% {
+    top: -10px;
+  }
+
+  50% {
+    top: 10px;
+  }
+
+  100% {
+    top: -10px;
+  }
+}
+
+#entry {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 100px);
+  justify-content: center;
+}
+
+#brand {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  -webkit-animation: brandAnimation 2s infinite ease-in-out;
+  animation: brandAnimation 2s infinite ease-in-out;
+
+  img:first-child {
+    height: 75px;
+    width: 75px;
+  }
+
+  img:last-child {
+    height: 85%;
+    width: 85%;
+  }
+}
+
+#motto {
+  align-items: center;
+  display: flex;
+  font-family: 'Register';
+  font-size: 20px;
+  height: 100px;
+}
+
+#entry-message {
+  color: #00ff00;
+  font-size: 20px;
+  margin-bottom: 30px;
+  width: calc(100% - 100px);
+}
+
+#entry-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.entry-field {
+  background-color: transparent;
+  border-color: #00ff00;
+  color: #00ff00;
+  font-size: 20px;
+  margin: 5px 0px;
+  outline: none;
+  padding: 5px 10px;
+  width: calc(100% - 100px);
+}
+
+#login-form-buttons, #signup-form-buttons {
+  input {
+    height: 60px;
+    outline: none;
+    width: 120px;
+  }
+
+  a {
+    line-height: 58px;
+    text-decoration: none;
+    width: 118px;
+  }
+}
+
+#login-form-buttons, #signup-form-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+
+  input, a {
+    background: none;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px 20px;
+  }
+}
+
+#traders-online {
+  align-items: center;
+  color: #00ff00;
+  display: flex;
+  font-family: 'Register';
+  font-size: 20px;
+  font-style: normal;
+  height: 100px;
+  justify-content: center;
+}
+
+#trending-terminal {
+  align-self: flex-start;
+  color: #00ff00;
+  font-family: 'Register';
+  font-size: 36px;
+}
+
+@media screen and (min-width: 500px) {
+  #brand{
+    img:first-child {
+      height: 100px;
+      width: 100px;
+    }
+
+    img:last-child {
+      height: 90%;
+      width: 90%;
+    }
+  }
+
+  #motto {
+    font-size: 22px;
+  }
+
+  #entry-message, .entry-field {
+    font-size: 22px;
+    width: 400px;
+  }
+
+  #login-form-buttons, #signup-form-buttons {
+    input, a {
+      font-size: 22px;
+    }
+  }
+
+  #traders-online {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #brand {
+    img:first-child {
+      height: 125px;
+      width: 125px;
+    }
+
+    img:last-child {
+      height: 95%;
+      width: 95%;
+    }
+  }
+
+  #motto {
+    font-size: 24px;
+  }
+
+  #entry-message, .entry-field {
+    font-size: 24px;
+    width: 500px;
+  }
+
+  #login-form-buttons, #signup-form-buttons {
+    input, a {
+      font-size: 24px;
+    }
+  }
+
+  #traders-online {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #brand {
+    img:first-child {
+      height: 150px;
+      width: 150px;
+    }
+
+    img:last-child {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,15 +1,11 @@
 package com.subtletygames
 
+import com.subtletygames.routes._
+
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
-
-import akka.http.scaladsl.model.{ ContentTypes, HttpEntity }
-import akka.http.scaladsl.server.HttpApp
-import akka.http.scaladsl.server.Route
-
-import scala.util.Properties
 
 object Main extends App {
   implicit val system = ActorSystem()
@@ -17,11 +13,8 @@ object Main extends App {
   implicit val executionContext = system.dispatcher
 
   val route = {
-    pathSingleSlash {
-      get {
-        getFromFile("index.html")
-      }
-    } ~
+    RootRoute() ~
+    SignupRoute() ~
     // Static files
     pathPrefix("public") {
       getFromDirectory("public")
@@ -32,7 +25,7 @@ object Main extends App {
     }
   }
 
-  val port = Properties.envOrElse("PORT", "8080").toInt
+  val port = 8080
 
   println(s"Listening on port $port")
   Http().bindAndHandle(route, "localhost", port)
